@@ -15,7 +15,7 @@ class MasterViewController: NSViewController {
         // Do view setup here.
     }
     
-    override var representedObject: AnyObject? {
+    override var representedObject: Any? {
         didSet {
             // Update the view, if already loaded.
         }

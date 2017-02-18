@@ -11,7 +11,7 @@ import Cocoa
 class DataSource: NSObject, NSCoding {
 
     var items: [Item] = []
-    var selectionIndexes: NSIndexSet = NSIndexSet()
+    var selectionIndexes: IndexSet = IndexSet()
     
     convenience init(items: [Item]) {
         self.init()
@@ -22,11 +22,11 @@ class DataSource: NSObject, NSCoding {
     required convenience init(coder aDecoder: NSCoder) {
         self.init()
         
-        self.items = aDecoder.decodeObjectForKey("items") as! [Item]
+        self.items = aDecoder.decodeObject(forKey: "items") as! [Item]
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(self.items, forKey: "items")
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.items, forKey: "items")
     }
     
 }

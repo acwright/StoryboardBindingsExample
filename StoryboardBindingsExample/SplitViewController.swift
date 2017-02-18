@@ -10,9 +10,9 @@ import Cocoa
 
 class SplitViewController: NSSplitViewController {
 
-    override var representedObject: AnyObject? {
+    override var representedObject: Any? {
         didSet {
-            for viewController in self.childViewControllers as! [NSViewController] {
+            for viewController in self.childViewControllers {
                 viewController.representedObject = representedObject
             }
         }

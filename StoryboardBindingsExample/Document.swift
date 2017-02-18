@@ -17,7 +17,7 @@ class Document: NSDocument {
         // Add your subclass-specific initialization here.
     }
     
-    override func windowControllerDidLoadNib(aController: NSWindowController) {
+    override func windowControllerDidLoadNib(_ aController: NSWindowController) {
         super.windowControllerDidLoadNib(aController)
         // Add any code here that needs to be executed once the windowController has loaded the document's window.
     }
@@ -28,36 +28,27 @@ class Document: NSDocument {
     
     override func makeWindowControllers() {
         // Returns the Storyboard that contains your Document window.
-        let storyboard = NSStoryboard(name: "Main", bundle: nil)!
-        let windowController = storyboard.instantiateControllerWithIdentifier("Document Window Controller") as! NSWindowController
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+        let windowController = storyboard.instantiateController(withIdentifier: "Document Window Controller") as! NSWindowController
         self.addWindowController(windowController)
     }
     
     // MARK: Serialization / Deserialization
     
-    override func readFromData(data: NSData, ofType typeName: String, error outError: NSErrorPointer) -> Bool {
-        if let dataSource = NSKeyedUnarchiver.unarchiveObjectWithData(data) as? DataSource {
+    override func read(from data: Data, ofType typeName: String) throws {
+        if let dataSource = NSKeyedUnarchiver.unarchiveObject(with: data) as? DataSource {
             self.dataSource = dataSource
-            
-            return true
+        } else {
+            throw NSError(domain: "Document", code: 0, userInfo: nil)
         }
-        
-        if outError != nil {
-            outError.memory = NSError(domain: NSCocoaErrorDomain, code: NSFileReadCorruptFileError, userInfo: [
-                NSLocalizedDescriptionKey: NSLocalizedString("Could not read file.", comment: "Read error description"),
-                NSLocalizedFailureReasonErrorKey: NSLocalizedString("File was in an invalid format.", comment: "Read failure reason")
-            ])
-        }
-        
-        return false
     }
     
-    override func dataOfType(typeName: String, error outError: NSErrorPointer) -> NSData? {
+    override func data(ofType typeName: String) throws -> Data {
         if let dataSource = self.dataSource {
-            return NSKeyedArchiver.archivedDataWithRootObject(dataSource)
+            return NSKeyedArchiver.archivedData(withRootObject: dataSource)
+        } else {
+            throw NSError(domain: "Document", code: 0, userInfo: nil)
         }
-        
-        return nil
     }
 
 

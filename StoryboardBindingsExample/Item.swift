@@ -21,11 +21,11 @@ class Item: NSObject, NSCoding {
     required convenience init(coder aDecoder: NSCoder) {
         self.init()
         
-        self.name = aDecoder.decodeObjectForKey("name") as! String
+        self.name = aDecoder.decodeObject(forKey: "name") as! String
     }
     
-    func encodeWithCoder(aCoder: NSCoder) {
-        aCoder.encodeObject(self.name, forKey: "name")
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(self.name, forKey: "name")
     }
     
 }
