@@ -10,7 +10,11 @@ import Cocoa
 
 class Document: NSDocument {
 
-    var dataSource: DataSource? = DataSource()
+    @objc var dataSource: DataSource? = DataSource()
+    
+    override class var autosavesInPlace: Bool {
+        return true
+    }
     
     override init() {
         super.init()
@@ -20,10 +24,6 @@ class Document: NSDocument {
     override func windowControllerDidLoadNib(_ aController: NSWindowController) {
         super.windowControllerDidLoadNib(aController)
         // Add any code here that needs to be executed once the windowController has loaded the document's window.
-    }
-    
-    override class func autosavesInPlace() -> Bool {
-        return true
     }
     
     override func makeWindowControllers() {

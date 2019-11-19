@@ -12,8 +12,8 @@ class SplitViewController: NSSplitViewController {
 
     override var representedObject: Any? {
         didSet {
-            for viewController in self.childViewControllers {
-                viewController.representedObject = representedObject
+            for viewController in self.children {
+                viewController.representedObject = self.representedObject
             }
         }
     }

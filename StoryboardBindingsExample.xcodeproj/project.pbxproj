@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,23 +12,12 @@
 		45553E2F1AEEB72B00B99606 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45553E2E1AEEB72B00B99606 /* Document.swift */; };
 		45553E311AEEB72B00B99606 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45553E301AEEB72B00B99606 /* Images.xcassets */; };
 		45553E341AEEB72B00B99606 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45553E321AEEB72B00B99606 /* Main.storyboard */; };
-		45553E401AEEB72B00B99606 /* StoryboardBindingsExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45553E3F1AEEB72B00B99606 /* StoryboardBindingsExampleTests.swift */; };
 		45553E4A1AEEB77300B99606 /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45553E491AEEB77300B99606 /* DataSource.swift */; };
 		45553E4C1AEEB7E000B99606 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45553E4B1AEEB7E000B99606 /* Item.swift */; };
 		45553E4E1AEEB89300B99606 /* WindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45553E4D1AEEB89300B99606 /* WindowController.swift */; };
 		45553E501AEEB97F00B99606 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45553E4F1AEEB97F00B99606 /* SplitViewController.swift */; };
 		45553E541AEEBA7C00B99606 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45553E531AEEBA7C00B99606 /* MasterViewController.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		45553E3A1AEEB72B00B99606 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 45553E1D1AEEB72B00B99606 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 45553E241AEEB72B00B99606;
-			remoteInfo = StoryboardBindingsExample;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		45553E251AEEB72B00B99606 /* StoryboardBindingsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryboardBindingsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,9 +27,6 @@
 		45553E2E1AEEB72B00B99606 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		45553E301AEEB72B00B99606 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		45553E331AEEB72B00B99606 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		45553E391AEEB72B00B99606 /* StoryboardBindingsExampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryboardBindingsExampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		45553E3E1AEEB72B00B99606 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45553E3F1AEEB72B00B99606 /* StoryboardBindingsExampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardBindingsExampleTests.swift; sourceTree = "<group>"; };
 		45553E491AEEB77300B99606 /* DataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		45553E4B1AEEB7E000B99606 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		45553E4D1AEEB89300B99606 /* WindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowController.swift; sourceTree = "<group>"; };
@@ -56,13 +42,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		45553E361AEEB72B00B99606 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -70,7 +49,6 @@
 			isa = PBXGroup;
 			children = (
 				45553E271AEEB72B00B99606 /* StoryboardBindingsExample */,
-				45553E3C1AEEB72B00B99606 /* StoryboardBindingsExampleTests */,
 				45553E261AEEB72B00B99606 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -79,7 +57,6 @@
 			isa = PBXGroup;
 			children = (
 				45553E251AEEB72B00B99606 /* StoryboardBindingsExample.app */,
-				45553E391AEEB72B00B99606 /* StoryboardBindingsExampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,23 +78,6 @@
 			children = (
 				45553E301AEEB72B00B99606 /* Images.xcassets */,
 				45553E291AEEB72B00B99606 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		45553E3C1AEEB72B00B99606 /* StoryboardBindingsExampleTests */ = {
-			isa = PBXGroup;
-			children = (
-				45553E3F1AEEB72B00B99606 /* StoryboardBindingsExampleTests.swift */,
-				45553E3D1AEEB72B00B99606 /* Supporting Files */,
-			);
-			path = StoryboardBindingsExampleTests;
-			sourceTree = "<group>";
-		};
-		45553E3D1AEEB72B00B99606 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				45553E3E1AEEB72B00B99606 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -163,47 +123,24 @@
 			productReference = 45553E251AEEB72B00B99606 /* StoryboardBindingsExample.app */;
 			productType = "com.apple.product-type.application";
 		};
-		45553E381AEEB72B00B99606 /* StoryboardBindingsExampleTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 45553E461AEEB72B00B99606 /* Build configuration list for PBXNativeTarget "StoryboardBindingsExampleTests" */;
-			buildPhases = (
-				45553E351AEEB72B00B99606 /* Sources */,
-				45553E361AEEB72B00B99606 /* Frameworks */,
-				45553E371AEEB72B00B99606 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				45553E3B1AEEB72B00B99606 /* PBXTargetDependency */,
-			);
-			name = StoryboardBindingsExampleTests;
-			productName = StoryboardBindingsExampleTests;
-			productReference = 45553E391AEEB72B00B99606 /* StoryboardBindingsExampleTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		45553E1D1AEEB72B00B99606 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0820;
+				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Aaron Wright";
 				TargetAttributes = {
 					45553E241AEEB72B00B99606 = {
 						CreatedOnToolsVersion = 6.3.1;
 						LastSwiftMigration = 0820;
 					};
-					45553E381AEEB72B00B99606 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0820;
-						TestTargetID = 45553E241AEEB72B00B99606;
-					};
 				};
 			};
 			buildConfigurationList = 45553E201AEEB72B00B99606 /* Build configuration list for PBXProject "StoryboardBindingsExample" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
@@ -215,7 +152,6 @@
 			projectRoot = "";
 			targets = (
 				45553E241AEEB72B00B99606 /* StoryboardBindingsExample */,
-				45553E381AEEB72B00B99606 /* StoryboardBindingsExampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -227,13 +163,6 @@
 			files = (
 				45553E311AEEB72B00B99606 /* Images.xcassets in Resources */,
 				45553E341AEEB72B00B99606 /* Main.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		45553E371AEEB72B00B99606 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,23 +184,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		45553E351AEEB72B00B99606 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				45553E401AEEB72B00B99606 /* StoryboardBindingsExampleTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		45553E3B1AEEB72B00B99606 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 45553E241AEEB72B00B99606 /* StoryboardBindingsExample */;
-			targetProxy = 45553E3A1AEEB72B00B99606 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		45553E321AEEB72B00B99606 /* Main.storyboard */ = {
@@ -289,18 +202,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -336,18 +258,27 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -367,7 +298,8 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
@@ -375,12 +307,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = StoryboardBindingsExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acwrightdesign.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -388,52 +325,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = StoryboardBindingsExample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.acwrightdesign.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-			};
-			name = Release;
-		};
-		45553E471AEEB72B00B99606 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = StoryboardBindingsExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.acwrightdesign.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StoryboardBindingsExample.app/Contents/MacOS/StoryboardBindingsExample";
-			};
-			name = Debug;
-		};
-		45553E481AEEB72B00B99606 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(DEVELOPER_FRAMEWORKS_DIR)",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = StoryboardBindingsExampleTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.acwrightdesign.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StoryboardBindingsExample.app/Contents/MacOS/StoryboardBindingsExample";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
@@ -454,15 +356,6 @@
 			buildConfigurations = (
 				45553E441AEEB72B00B99606 /* Debug */,
 				45553E451AEEB72B00B99606 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		45553E461AEEB72B00B99606 /* Build configuration list for PBXNativeTarget "StoryboardBindingsExampleTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				45553E471AEEB72B00B99606 /* Debug */,
-				45553E481AEEB72B00B99606 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

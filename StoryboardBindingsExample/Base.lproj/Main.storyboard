@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14E7f" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7702"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -650,11 +652,14 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController storyboardIdentifier="Document Window Controller" id="jGA-0Y-lOj" customClass="WindowController" customModule="StoryboardBindingsExample" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Ckk-yw-fiv">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" id="Ckk-yw-fiv">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="480" height="270"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <connections>
+                            <outlet property="delegate" destination="jGA-0Y-lOj" id="1ZG-6x-erY"/>
+                        </connections>
                     </window>
                     <connections>
                         <segue destination="lc9-8Q-7o2" kind="relationship" relationship="window.shadowedContentViewController" id="fUJ-Bc-j3h"/>
@@ -675,8 +680,12 @@
                     <splitView key="splitView" dividerStyle="thin" vertical="YES" id="gwk-uJ-0oQ">
                         <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <outlet property="delegate" destination="lc9-8Q-7o2" id="aYE-OY-UPB"/>
+                        </connections>
                     </splitView>
                     <connections>
+                        <outlet property="splitView" destination="gwk-uJ-0oQ" id="GAR-5W-Ozh"/>
                         <segue destination="DUz-gX-aY1" kind="relationship" relationship="splitItems" id="9jV-jl-zNA"/>
                         <segue destination="eyV-y0-tbh" kind="relationship" relationship="splitItems" id="P27-c4-iEV"/>
                     </connections>
@@ -690,25 +699,25 @@
             <objects>
                 <viewController id="DUz-gX-aY1" customClass="MasterViewController" customModule="StoryboardBindingsExample" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="Yha-L2-sWD">
-                        <rect key="frame" x="0.0" y="0.0" width="280" height="300"/>
+                        <rect key="frame" x="0.0" y="0.0" width="280" height="299"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="38" horizontalPageScroll="10" verticalLineScroll="38" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cps-Td-XhK">
-                                <rect key="frame" x="20" y="52" width="240" height="228"/>
+                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="34" horizontalPageScroll="10" verticalLineScroll="34" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cps-Td-XhK">
+                                <rect key="frame" x="20" y="52" width="240" height="227"/>
                                 <clipView key="contentView" drawsBackground="NO" id="nwi-Jf-0tE">
-                                    <rect key="frame" x="1" y="17" width="238" height="117"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="240" height="227"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView appearanceType="vibrantLight" verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" autosaveColumns="NO" rowHeight="36" rowSizeStyle="large" viewBased="YES" id="w3r-6f-ezy">
-                                            <rect key="frame" x="0.0" y="0.0" width="238" height="117"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" alternatingRowBackgroundColors="YES" columnReordering="NO" columnResizing="NO" autosaveColumns="NO" rowHeight="32" rowSizeStyle="large" viewBased="YES" id="w3r-6f-ezy">
+                                            <rect key="frame" x="0.0" y="0.0" width="240" height="227"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="3" height="2"/>
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
                                                 <tableColumn width="237" minWidth="40" maxWidth="1000" id="5qa-GU-bMp">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border" alignment="left">
-                                                        <font key="font" metaFont="smallSystem"/>
+                                                        <font key="font" metaFont="toolTip"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
                                                     </tableHeaderCell>
@@ -724,7 +733,7 @@
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="JCX-2B-RFP">
-                                                                    <rect key="frame" x="1" y="11" width="235" height="17"/>
+                                                                    <rect key="frame" x="1" y="11" width="235" height="16"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="EoW-uV-TID">
                                                                         <font key="font" metaFont="system"/>
                                                                         <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -758,17 +767,17 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="fJb-Kt-fq4"/>
                                 </constraints>
-                                <scroller key="horizontalScroller" hidden="YES" appearanceType="vibrantLight" verticalHuggingPriority="750" horizontal="YES" id="rhk-7Q-LOu">
+                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="rhk-7Q-LOu">
                                     <rect key="frame" x="1" y="119" width="223" height="15"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <scroller key="verticalScroller" hidden="YES" appearanceType="vibrantLight" verticalHuggingPriority="750" horizontal="NO" id="QxD-TZ-v4t">
+                                <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="QxD-TZ-v4t">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Gkx-cX-3Lh">
-                                <rect key="frame" x="14" y="13" width="66" height="32"/>
+                                <rect key="frame" x="14" y="13" width="65" height="32"/>
                                 <buttonCell key="cell" type="push" title="Add" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="2sh-2g-7sH">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -779,7 +788,7 @@
                                 </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XdY-3D-7V4">
-                                <rect key="frame" x="80" y="13" width="91" height="32"/>
+                                <rect key="frame" x="79" y="13" width="89" height="32"/>
                                 <buttonCell key="cell" type="push" title="Remove" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="0Rp-8V-lJR">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -796,6 +805,7 @@
                             <constraint firstAttribute="trailing" secondItem="Cps-Td-XhK" secondAttribute="trailing" constant="20" symbolic="YES" id="WCK-bA-y9Y"/>
                             <constraint firstAttribute="bottom" secondItem="Gkx-cX-3Lh" secondAttribute="bottom" constant="20" symbolic="YES" id="e7s-Sl-8i1"/>
                             <constraint firstItem="Cps-Td-XhK" firstAttribute="top" secondItem="Yha-L2-sWD" secondAttribute="top" constant="20" symbolic="YES" id="gQP-7o-1ju"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="XdY-3D-7V4" secondAttribute="trailing" constant="20" symbolic="YES" id="hCG-aJ-FYI"/>
                             <constraint firstAttribute="bottom" secondItem="XdY-3D-7V4" secondAttribute="bottom" constant="20" id="tHl-QV-4hh"/>
                             <constraint firstItem="Gkx-cX-3Lh" firstAttribute="top" secondItem="Cps-Td-XhK" secondAttribute="bottom" constant="11" id="v5X-Pu-fsJ"/>
                             <constraint firstItem="XdY-3D-7V4" firstAttribute="leading" secondItem="Gkx-cX-3Lh" secondAttribute="trailing" constant="12" id="yv9-RZ-55E"/>
@@ -805,8 +815,8 @@
                 <customObject id="M49-Vv-0lW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController objectClassName="StoryboardBindingsExample.Item" id="PH4-Hb-tIU">
                     <connections>
-                        <binding destination="DUz-gX-aY1" name="contentArray" keyPath="self.representedObject.dataSource.items" id="qnU-ZT-WTF"/>
                         <binding destination="DUz-gX-aY1" name="contentArrayForMultipleSelection" keyPath="self.representedObject.dataSource.items" previousBinding="qnU-ZT-WTF" id="eir-tO-Ydf"/>
+                        <binding destination="DUz-gX-aY1" name="contentArray" keyPath="self.representedObject.dataSource.items" id="qnU-ZT-WTF"/>
                         <binding destination="DUz-gX-aY1" name="selectionIndexes" keyPath="self.representedObject.dataSource.selectionIndexes" id="2Yw-Fm-jqM"/>
                     </connections>
                 </arrayController>
@@ -822,13 +832,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="3B0-dM-kgv">
-                                <rect key="frame" x="20" y="258" width="400" height="22"/>
+                                <rect key="frame" x="20" y="259" width="400" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="1dj-bt-1Jj"/>
                                 </constraints>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="Name" drawsBackground="YES" id="FR0-Ap-A1j">
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                                 <connections>
@@ -846,8 +856,8 @@
                 <customObject id="a5l-iM-SYx" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <arrayController objectClassName="StoryboardBindingsExample.Item" id="KJu-5l-LiN">
                     <connections>
-                        <binding destination="eyV-y0-tbh" name="contentArray" keyPath="self.representedObject.dataSource.items" id="y6p-ey-fCu"/>
                         <binding destination="eyV-y0-tbh" name="contentArrayForMultipleSelection" keyPath="self.representedObject.dataSource.items" previousBinding="y6p-ey-fCu" id="CjY-mz-5wg"/>
+                        <binding destination="eyV-y0-tbh" name="contentArray" keyPath="self.representedObject.dataSource.items" id="y6p-ey-fCu"/>
                         <binding destination="eyV-y0-tbh" name="selectionIndexes" keyPath="self.representedObject.dataSource.selectionIndexes" id="wp3-c8-axb"/>
                     </connections>
                 </arrayController>

@@ -10,8 +10,8 @@ import Cocoa
 
 class DataSource: NSObject, NSCoding {
 
-    var items: [Item] = []
-    var selectionIndexes: IndexSet = IndexSet()
+    @objc var items: [Item] = []
+    @objc var selectionIndexes: IndexSet = IndexSet()
     
     convenience init(items: [Item]) {
         self.init()

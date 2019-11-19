@@ -10,7 +10,7 @@ import Cocoa
 
 class Item: NSObject, NSCoding {
 
-    var name: String = "New Item"
+    @objc var name: String = "New Item"
     
     convenience init(name: String) {
         self.init()
